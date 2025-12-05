@@ -452,6 +452,8 @@ Email: contato@bravabeachclub.com`;
     let numeroWhatsApp;
     if (estadoAgendamento.professor.nome === 'Samuel Isaac') {
         numeroWhatsApp = '554399663926'; // +55 43 9966-3926
+    } else if (estadoAgendamento.professor.nome === 'Maria Pazzotti') {
+        numeroWhatsApp = '554399700998'; // +55 43 9970-0998
     } else {
         numeroWhatsApp = '5543996212570'; // Número padrão da Brava
     }
