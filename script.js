@@ -425,8 +425,7 @@ function enviarMensagemProfessor() {
     let horariosTexto = '';
     estadoAgendamento.horarios.forEach(h => {
         const [dia, horario] = h.split(' - ');
-        const proximoDia = obterProximoDia(dia);
-        horariosTexto += `\n  - ${proximoDia} às ${horario}`;
+        horariosTexto += `\n  - ${dia} - ${horario}`;
     });
     
     // Montar mensagem formatada para WhatsApp
