@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brava Beach Club - Agende Sua Aula</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/Logo.jpeg" alt="Brava Beach Club Logo" class="logo-img">
+                <span>Brava Beach Club</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Passo 0: Dados Pessoais -->
+        <section class="step" id="step-0">
+            <div class="container">
+                <div class="step-header">
+                    <h2>Bem-vindo! 👋</h2>
+                    <p>Primeiro, nos conte um pouco sobre você</p>
+                </div>
+                <div class="form-card">
+                    <form id="form-dados-pessoais">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idade">Idade *</label>
+                            <input type="number" id="idade" name="idade" placeholder="Sua idade" min="1" max="120" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone (WhatsApp) *</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(00) 9XXXX-XXXX" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sexualidade">Gênero *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="sexualidade" value="Masculino" required>
+                                    Masculino
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="sexualidade" value="Feminino" required>
+                                    Feminino
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="sexualidade" value="Prefiro não informar" required>
+                                    Prefiro não informar
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-primary" id="btn-continuar-esportes">Continuar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 1: Selecionar Esporte -->
+        <section class="step hidden" id="step-1">
+            <div class="container">
+                <div class="step-header">
+                    <button class="btn-voltar" id="voltar-passo-0">← Voltar</button>
+                    <div>
+                        <h2>Passo 1: Escolha o Esporte</h2>
+                        <p>Selecione qual esporte você gostaria de praticar</p>
+                    </div>
+                </div>
+                <div class="esportes-grid">
+                    <div class="esporte-card" data-esporte="futevolei">
+                        <div class="esporte-imagem">
+                            <img src="img/futvolei.jpg" alt="Futevôlei" class="esporte-foto">
+                        </div>
+                        <h3>Futevôlei</h3>
+                        <p>Uma mistura emocionante de futebol e vôlei</p>
+                    </div>
+                    <div class="esporte-card" data-esporte="volei">
+                        <div class="esporte-imagem">
+                            <img src="img/volei.jpg" alt="Vôlei de Praia" class="esporte-foto">
+                        </div>
+                        <h3>Vôlei de Praia</h3>
+                        <p>O clássico esporte de praia</p>
+                    </div>
+                    <div class="esporte-card" data-esporte="beachtennis">
+                        <div class="esporte-imagem">
+                            <img src="img/beachTennis.avif" alt="Beach Tennis" class="esporte-foto">
+                        </div>
+                        <h3>Beach Tennis</h3>
+                        <p>Combine a velocidade do tênis com a praia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 2: Selecionar Professor -->
+        <section class="step hidden" id="step-2">
+            <div class="container">
+                <div class="step-header">
+                    <button class="btn-voltar" id="voltar-passo-1">← Voltar</button>
+                    <div>
+                        <h2>Passo 2: Escolha o Professor</h2>
+                        <p id="esporte-selecionado-texto">Especialistas em: </p>
+                    </div>
+                </div>
+                <div class="professores-grid" id="professores-container">
+                    <!-- Preenchido dinamicamente pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 3: Selecionar Horário -->
+        <section class="step hidden" id="step-3">
+            <div class="container">
+                <div class="step-header">
+                    <button class="btn-voltar" id="voltar-passo-2">← Voltar</button>
+                    <div>
+                        <h2>Passo 3: Escolha o Horário</h2>
+                        <p id="professor-selecionado-texto">Professor: </p>
+                        <p class="horario-info">💡 Você pode selecionar até 2 horários diferentes</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <button class="btn-primary" id="btn-confirmar-horarios">Confirmar Horários e Continuar</button>
+                </div>
+                <div class="horarios-container">
+                    <div class="dias-semana" id="dias-semana">
+                        <!-- Preenchido dinamicamente pelo JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passo 4: Confirmação -->
+        <section class="step hidden" id="step-4">
+            <div class="container">
+                <div class="step-header">
+                    <h2>!! Agora é só clicar em enviar informações !!</h2>
+                </div>
+                <div class="confirmacao-card">
+                    <div class="confirmacao-content">
+                        <div class="confirmacao-item">
+                            <span class="label">Esporte:</span>
+                            <span class="value" id="conf-esporte"></span>
+                        </div>
+                        <div class="confirmacao-item">
+                            <span class="label">Professor:</span>
+                            <span class="value" id="conf-professor"></span>
+                        </div>
+                        <div class="confirmacao-item">
+                            <span class="label">Data e Horário:</span>
+                            <div class="value" id="conf-data"></div>
+                        </div>
+                    </div>
+
+                    <!-- Aviso de Envio via WhatsApp -->
+                    <div class="aviso-whatsapp">
+                        <p>📱 Para finalizar sua inscrição, clique no botão abaixo para enviar suas informações via WhatsApp</p>
+                    </div>
+
+                    <div class="confirmacao-buttons">
+                        <button class="btn-primary" id="btn-novo-agendamento">Fazer Novo Agendamento</button>
+                        <button class="btn-secondary" id="btn-enviar-confirmacao">Enviar via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Brava Beach Club</h4>
+                    <p>Sabor, esporte e diversão para toda família 💛</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Localização</h4>
+                    <p>Av.Brasília, 125<br>Rolândia, Paraná</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (21) 9999-9999<br>📧 contato@bravabeachclub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Brava Beach Club. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

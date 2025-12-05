@@ -1,0 +1,676 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #E80B7A;
+    --primary-dark: #FF1493;
+    --secondary-color: #00D4FF;
+    --accent-color: #9D4EDD;
+    --success-color: #4caf50;
+    --text-dark: #ffffff;
+    --text-light: #b0b0b0;
+    --bg-light: #1a1a2e;
+    --white: #0f0f1e;
+    --border-color: #2d2d44;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #FF1493 0%, #00D4FF 100%);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--secondary-color);
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Main Container */
+.main-container {
+    min-height: calc(100vh - 200px);
+    padding: 60px 20px;
+    background: transparent;
+}
+
+/* Steps */
+.step {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.4s ease;
+    animation: slideIn 0.4s ease;
+}
+
+.step.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.step-header {
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.step-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.step-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.horario-info {
+    background-color: rgba(255, 193, 7, 0.1);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #856404;
+    font-weight: 500;
+}
+
+.btn-voltar {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Formulário de Dados Pessoais */
+.form-card {
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.95) 0%, rgba(25, 25, 45, 0.95) 100%);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 450px;
+    margin: 0 auto;
+    border: 2px solid rgba(224, 212, 255, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease;
+    color: var(--text-dark);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+#btn-continuar-esportes {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Esportes Grid */
+.esportes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.esporte-card {
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.95) 0%, rgba(25, 25, 45, 0.95) 100%);
+    padding: 0;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid rgba(224, 212, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-dark);
+}
+
+.esporte-card > h3,
+.esporte-card > p {
+    padding: 0 30px;
+}
+
+.esporte-card h3 {
+    padding-top: 20px;
+}
+
+.esporte-card p {
+    padding: 0 30px 30px;
+}
+
+.esporte-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(30, 136, 229, 0.2);
+}
+
+.esporte-card.selected {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.esporte-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.esporte-imagem {
+    width: 100%;
+    height: 180px;
+    background-color: #f0f0f0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.esporte-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.esporte-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+.esporte-card p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.esporte-card.selected p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Professores Grid */
+.professores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.professor-card {
+    background-color: rgba(30, 30, 50, 0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid rgba(224, 212, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.professor-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(30, 136, 229, 0.2);
+}
+
+.professor-card.selected {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.professor-card.genero-masculino {
+    border-color: var(--secondary-color);
+    border-width: 3px;
+}
+
+.professor-card.genero-feminino {
+    border-color: var(--primary-color);
+    border-width: 3px;
+}
+
+.professor-avatar {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.professor-avatar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+}
+
+.professor-card.selected .professor-avatar-img {
+    border-color: var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.professor-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: inherit;
+}
+
+.especialidade {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.professor-card.selected .especialidade {
+    color: var(--secondary-color);
+}
+
+.descricao {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+.professor-card.selected .descricao {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Horários Container */
+.horarios-container {
+    background-color: rgba(30, 30, 50, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(224, 212, 255, 0.3);
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.dia-card {
+    border: 2px solid rgba(224, 212, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: rgba(20, 20, 35, 0.8);
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+}
+
+.dia-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.horarios-list {
+    padding: 20px;
+}
+
+.horario-slot {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: rgba(50, 50, 70, 0.6);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.horario-slot:last-child {
+    margin-bottom: 0;
+}
+
+.horario-slot:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(30, 136, 229, 0.05);
+    transform: translateX(5px);
+}
+
+.horario-slot.selected {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.horario-slot.unavailable {
+    background-color: rgba(60, 60, 80, 0.4);
+    color: #888;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Confirmação */
+.confirmacao-card {
+    background-color: rgba(30, 30, 50, 0.95);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid rgba(224, 212, 255, 0.3);
+}
+
+.confirmacao-content {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(224, 212, 255, 0.3);
+}
+
+.confirmacao-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 1.1rem;
+}
+
+.confirmacao-item .label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.confirmacao-item .value {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.horario-confirmacao {
+    background-color: rgba(45, 45, 70, 0.6);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 8px 0;
+    border-left: 4px solid var(--primary-color);
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.horario-confirmacao strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Aviso de Envio via WhatsApp */
+.aviso-whatsapp {
+    background: linear-gradient(135deg, rgba(232, 11, 122, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid rgba(232, 11, 122, 0.5);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.aviso-whatsapp p {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 0;
+}
+
+.confirmacao-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(30, 136, 229, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: var(--white);
+    padding: 50px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.footer-section p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #999;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .step-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .esportes-grid,
+    .professores-grid,
+    .dias-semana {
+        grid-template-columns: 1fr;
+    }
+
+    .esporte-card,
+    .professor-card {
+        padding: 20px 15px;
+    }
+
+    .esporte-card h3 {
+        padding-top: 15px;
+        font-size: 1.1rem;
+    }
+
+    .esporte-card p {
+        padding: 0 15px 15px;
+        font-size: 0.9rem;
+    }
+
+    .horarios-container {
+        padding: 20px;
+    }
+
+    .confirmacao-card {
+        padding: 30px 20px;
+    }
+
+    .confirmacao-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 30px 15px;
+    }
+
+    .step-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .esporte-icon,
+    .professor-avatar {
+        font-size: 3rem;
+    }
+
+    .confirmacao-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .mensagem-professor textarea {
+        font-size: 16px;
+    }
+}

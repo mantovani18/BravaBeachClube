@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerar Imagens dos Esportes</title>
+</head>
+<body>
+    <h1>Clique com botão direito e salve as imagens</h1>
+    
+    <h2>Futevôlei (futevolei.png)</h2>
+    <canvas id="futevolei"></canvas>
+    
+    <h2>Vôlei de Praia (volei.png)</h2>
+    <canvas id="volei"></canvas>
+    
+    <h2>Beach Tennis (beachtennis.png)</h2>
+    <canvas id="beachtennis"></canvas>
+    
+    <script>
+        // Futevôlei - Bola de futebol
+        const futevoleiCanvas = document.getElementById('futevolei');
+        const futevoleiCtx = futevoleiCanvas.getContext('2d');
+        futevoleiCanvas.width = 300;
+        futevoleiCanvas.height = 300;
+        
+        // Gradiente de fundo
+        const futeGrad = futevoleiCtx.createLinearGradient(0, 0, 300, 300);
+        futeGrad.addColorStop(0, '#87CEEB');
+        futeGrad.addColorStop(1, '#E0F6FF');
+        futevoleiCtx.fillStyle = futeGrad;
+        futevoleiCtx.fillRect(0, 0, 300, 300);
+        
+        // Bola de futebol
+        futevoleiCtx.beginPath();
+        futevoleiCtx.arc(150, 150, 80, 0, Math.PI * 2);
+        futevoleiCtx.fillStyle = '#FFFFFF';
+        futevoleiCtx.fill();
+        futevoleiCtx.strokeStyle = '#000000';
+        futevoleiCtx.lineWidth = 2;
+        futevoleiCtx.stroke();
+        
+        // Hexágonos e pentágonos
+        futevoleiCtx.strokeStyle = '#1E88E5';
+        futevoleiCtx.lineWidth = 3;
+        drawHexagon(futevoleiCtx, 150, 100, 20);
+        drawPentagon(futevoleiCtx, 150, 150, 20);
+        drawHexagon(futevoleiCtx, 120, 180, 20);
+        drawHexagon(futevoleiCtx, 180, 180, 20);
+        
+        // Vôlei de Praia - Bola de vôlei
+        const voleICanvas = document.getElementById('volei');
+        const voleICtx = voleICanvas.getContext('2d');
+        voleICanvas.width = 300;
+        voleICanvas.height = 300;
+        
+        // Gradiente de fundo
+        const voleGrad = voleICtx.createLinearGradient(0, 0, 300, 300);
+        voleGrad.addColorStop(0, '#87CEEB');
+        voleGrad.addColorStop(1, '#E0F6FF');
+        voleICtx.fillStyle = voleGrad;
+        voleICtx.fillRect(0, 0, 300, 300);
+        
+        // Bola de vôlei
+        voleICtx.beginPath();
+        voleICtx.arc(150, 150, 80, 0, Math.PI * 2);
+        voleICtx.fillStyle = '#FFFFFF';
+        voleICtx.fill();
+        voleICtx.strokeStyle = '#D8A5D8';
+        voleICtx.lineWidth = 3;
+        voleICtx.stroke();
+        
+        // Faixas de vôlei
+        voleICtx.strokeStyle = '#D8A5D8';
+        voleICtx.lineWidth = 4;
+        voleICtx.beginPath();
+        voleICtx.arc(150, 150, 70, 0, Math.PI * 2);
+        voleICtx.stroke();
+        
+        voleICtx.beginPath();
+        voleICtx.moveTo(150, 70);
+        voleICtx.lineTo(150, 230);
+        voleICtx.stroke();
+        
+        voleICtx.beginPath();
+        voleICtx.moveTo(70, 150);
+        voleICtx.lineTo(230, 150);
+        voleICtx.stroke();
+        
+        // Beach Tennis - Bola de tênis
+        const tennisCanvas = document.getElementById('beachtennis');
+        const tennisCtx = tennisCanvas.getContext('2d');
+        tennisCanvas.width = 300;
+        tennisCanvas.height = 300;
+        
+        // Gradiente de fundo
+        const tennisGrad = tennisCtx.createLinearGradient(0, 0, 300, 300);
+        tennisGrad.addColorStop(0, '#87CEEB');
+        tennisGrad.addColorStop(1, '#E0F6FF');
+        tennisCtx.fillStyle = tennisGrad;
+        tennisCtx.fillRect(0, 0, 300, 300);
+        
+        // Bola de tênis
+        tennisCtx.beginPath();
+        tennisCtx.arc(150, 150, 80, 0, Math.PI * 2);
+        tennisCtx.fillStyle = '#D4F74F';
+        tennisCtx.fill();
+        tennisCtx.strokeStyle = '#CCCCCC';
+        tennisCtx.lineWidth = 2;
+        tennisCtx.stroke();
+        
+        // Costuras
+        tennisCtx.strokeStyle = '#FFFFFF';
+        tennisCtx.lineWidth = 3;
+        tennisCtx.beginPath();
+        tennisCtx.arc(150, 150, 60, Math.PI * 0.3, Math.PI * 1.7);
+        tennisCtx.stroke();
+        
+        tennisCtx.beginPath();
+        tennisCtx.arc(150, 150, 60, Math.PI * -0.3, Math.PI * 0.3);
+        tennisCtx.stroke();
+        
+        function drawHexagon(ctx, x, y, size) {
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                const angle = (i * Math.PI) / 3;
+                const hx = x + size * Math.cos(angle);
+                const hy = y + size * Math.sin(angle);
+                if (i === 0) ctx.moveTo(hx, hy);
+                else ctx.lineTo(hx, hy);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+        
+        function drawPentagon(ctx, x, y, size) {
+            ctx.beginPath();
+            for (let i = 0; i < 5; i++) {
+                const angle = (i * Math.PI * 2) / 5 - Math.PI / 2;
+                const px = x + size * Math.cos(angle);
+                const py = y + size * Math.sin(angle);
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+    </script>
+</body>
+</html>
