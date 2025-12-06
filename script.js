@@ -313,8 +313,7 @@ function mostrarConfirmacao() {
     let horariosFormatados = '';
     horarios.forEach((h, index) => {
         const [dia, horario] = h.split(' - ');
-        const proximoDia = obterProximoDia(dia);
-        horariosFormatados += `<div class="horario-confirmacao"><strong>${proximoDia}</strong> às ${horario}</div>`;
+        horariosFormatados += `<div class="horario-confirmacao"><strong>${dia}</strong> às ${horario}</div>`;
     });
     
     document.getElementById('conf-data').innerHTML = horariosFormatados;
