@@ -485,7 +485,7 @@ Esporte: ${esporteData.nome}
 Professor: ${estadoAgendamento.professor.nome}
 
 Local: Praia de Brava
-Telefone: (21) 9999-9999
+Telefone: (21)  99654-1997
 
 Obrigado por escolher Brava Beach Club!
     `;
