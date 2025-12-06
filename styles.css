@@ -65,6 +65,7 @@ body {
     width: auto;
     object-fit: contain;
     border-radius: 50%;
+    animation: wave 2s ease-in-out infinite;
 }
 
 /* Main Container */
@@ -94,6 +95,21 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotateZ(-2deg);
+    }
+    50% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+    75% {
+        transform: translateY(-10px) rotateZ(2deg);
     }
 }
 
