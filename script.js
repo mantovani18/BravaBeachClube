@@ -83,6 +83,23 @@ const database = {
                     "Sábado": [],
                     "Domingo": []
                 }
+            },
+            {
+                id: 8,
+                nome: "Elizânia Martins Teixeira",
+                avatar: "img/Elizania.jpg",
+                genero: "feminino",
+                descricao: "Treinamentos BT\nCRAB Beach Tênnis - Mod: I, II e III\nCRAB Kids\nTática e Técnica Marcus Ferreira\n2° Edição Curso de Beach Tênnis para Professores CT Lucas Souza",
+                especialidade: "Especialista em Beach Tennis",
+                horarios: {
+                    "Segunda": ["07:00", "08:00", "09:00", "10:00", "17:00", "18:00", "19:00", "20:00"],
+                    "Terça": ["07:00", "08:00", "09:00", "10:00", "17:00", "18:00"],
+                    "Quarta": ["07:00", "08:00", "09:00", "10:00", "17:00", "18:00"],
+                    "Quinta": ["07:00", "08:00", "09:00", "10:00", "19:00", "20:00"],
+                    "Sexta": [],
+                    "Sábado": [],
+                    "Domingo": []
+                }
             }
         ]
     }
