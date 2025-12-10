@@ -9,12 +9,12 @@ const database = {
                 nome: "Samuel Isaac",
                 avatar: "img/Samukinha.jpeg",
                 genero: "masculino",
-                descricao: "Professor experiente em futevôlei",
+                descricao: "🏆 Mais de 87 Títulos Locais e Regionais 🥇\n🌟 Campeão Paranaense 🇧🇷\n🥉 3º no Circuito Brasileiro 🚀",
                 especialidade: "Especialista em Futevôlei",
                 horarios: {
-                    "Segunda": ["17:00", "18:00", "19:00"],
-                    "Terça": ["09:00", "10:00", "17:30", "19:30"],
-                    "Quarta": ["16:00", "17:00", "18:00", "19:00", "20:00"],
+                    "Segunda": ["17:00", "18:00 [FEM]", "19:00" , "20:00 [FEM]"],
+                    "Terça": ["09:00", "10:00", "17:30"," 18:30 [FEM]", "19:30"],
+                    "Quarta": ["16:00", "17:00", "18:00", "19:00", "20:00 [FEM]"],
                     "Quinta": ["16:30", "17:30", "18:30"],
                     "Sexta": [],
                     "Sábado": [],
@@ -69,17 +69,17 @@ const database = {
         professores: [
             {
                 id: 7,
-                nome: "Maria Pazzotti",
+                nome: "Maria Eduarda Bortotti Pazzotti",
                 avatar: "img/MariaPazzotti.png",
                 genero: "feminino",
-                descricao: "Instrutora de Beach Tennis com experiência de sobra",
+                descricao: "🌎 Top 100 Mundial - #96 ITF do Mundo 🎾\n🇧🇷 Destaque Nacional - #46 do Brasil 🚀",
                 especialidade: "Especialista em Beach Tennis",
                 horarios: {
-                    "Segunda": ["17:00", "18:00", "19:00"],
-                    "Terça": ["09:00", "10:00", "17:30", "19:30"],
-                    "Quarta": ["16:00", "17:00", "18:00", "19:00", "20:00"],
-                    "Quinta": ["16:30", "17:30", "18:30"],
-                    "Sexta": [],
+                    "Segunda": [],
+                    "Terça": ["06:00", "08:00", "10:00", "11:00"],
+                    "Quarta": ["06:00", "08:00"],
+                    "Quinta": ["06:00", "08:00", "09:00", "10:00", "11:00", "13:00", "14:00", "17:00", "20:00"],
+                    "Sexta": ["06:00", "08:00", "10:00", "11:00", "13:00", "14:00", "16:00", "17:00", "18:00"],
                     "Sábado": [],
                     "Domingo": []
                 }
