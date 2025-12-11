@@ -26,7 +26,7 @@ const database = {
                 nome: "Ademir Carlos José",
                 avatar: "img/Coxa.jpeg",
                 genero: "masculino",
-                descricao: "Profissional dedicado ao futevôlei",
+                descricao: "⚽️🌴 Profissional dedicado ao Futevôlei, com anos de experiência em treinamento e competição.",
                 especialidade: "Especialista em Futevôlei",
                 horarios: {
                     "Segunda": ["18:00", "19:00", "20:00"],
