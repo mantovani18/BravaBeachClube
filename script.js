@@ -13,9 +13,9 @@ const database = {
                 especialidade: "Especialista em Futevôlei",
                 horarios: {
                     "Segunda": ["17:00", "18:00 [FEM]", "19:00" , "20:00 [FEM]"],
-                    "Terça": ["09:00", "10:00", "17:30"," 18:30 [FEM]", "19:30"],
+                    "Terça": ["08:30","10:00", "17:30"," 18:30 [FEM]", "19:30"],
                     "Quarta": ["16:00", "17:00", "18:00 [FEM]", "19:00", "20:00 [FEM]"],
-                    "Quinta": ["16:30", "17:30", "18:30"],
+                    "Quinta": ["08:30","16:30", "17:30", "18:30","19:30", "20:30"],
                     "Sexta": [],
                     "Sábado": [],
                     "Domingo": []
@@ -47,18 +47,18 @@ const database = {
             {
                 id: 4,
                 nome: "Ana Carolina Gimenez",
-                avatar: "img/AnaCarolina.png",
+                avatar: "img/AnaVolei.jpeg",
                 genero: "feminino",
-                descricao: "Jogadora profissional aposentada",
+                descricao: "🏐 Atleta de Vôlei desde os 6 anos de idade\n👩‍🏫 Treinadora com 10 anos de experiência\n🎓 Graduada em Educação Física, Bacharel - UEL\n🧠 Especialista em Psicologia do Esporte\n📜 Treinadora Nível II – CBV",
                 especialidade: "Especialista em Vôlei de Praia",
                 horarios: {
-                    "Segunda": ["10:00"],
-                    "Terça": ["10:00", "17:00"],
-                    "Quarta": ["10:00"],
-                    "Quinta": ["17:00"],
-                    "Sexta": ["10:00", "17:00"],
-                    "Sábado": ["11:00"],
-                    "Domingo": ["15:00"]
+                    "Segunda": ["19:30", "20:30"],
+                    "Terça": [],
+                    "Quarta": ["19:30", "20:30"],
+                    "Quinta": [],
+                    "Sexta": [],
+                    "Sábado": [],
+                    "Domingo": []
                 }
             }
         ]
@@ -460,8 +460,8 @@ Horários:${horariosTexto}
 
 ---
 Brava Beach Club
-Telefone: (21) 9999-9999
-Email: contato@bravabeachclub.com`;
+Telefone: (43) 9144-2802
+Você é Time Brava !`;
     
     // Determinar o número do WhatsApp baseado no professor
     let numeroWhatsApp;
@@ -469,8 +469,10 @@ Email: contato@bravabeachclub.com`;
         numeroWhatsApp = '554399663926'; // +55 43 9966-3926
     } else if (estadoAgendamento.professor.nome === 'Maria Pazzotti') {
         numeroWhatsApp = '554399700998'; // +55 43 9970-0998
+    } else if (estadoAgendamento.professor.nome === 'Ana Carolina Gimenez') {
+        numeroWhatsApp = '5543998273947'; // +55 43 9827-3947
     } else {
-        numeroWhatsApp = '5543996212570'; // Número padrão da Brava
+        numeroWhatsApp = '554391442802'; // +55 43 9144-2802 - Número padrão da Brava
     }
     
     // Codificar mensagem para URL
