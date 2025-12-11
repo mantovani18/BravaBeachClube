@@ -29,10 +29,10 @@ const database = {
                 descricao: "Profissional dedicado ao futevôlei",
                 especialidade: "Especialista em Futevôlei",
                 horarios: {
-                    "Segunda": ["17:00", "18:00", "19:00"],
-                    "Terça": ["09:00", "10:00", "17:30", "19:30"],
-                    "Quarta": ["16:00", "17:00", "18:00", "19:00", "20:00"],
-                    "Quinta": ["16:30", "17:30", "18:30"],
+                    "Segunda": ["18:00", "19:00", "20:00"],
+                    "Terça": ["18:30 [FEM]", "19:30 [FEM]", "20:30 [FEM]"],
+                    "Quarta": ["18:00", "19:00"],
+                    "Quinta": ["18:30 [FEM]", "19:30 [FEM]", "20:30 [FEM]"],
                     "Sexta": [],
                     "Sábado": [],
                     "Domingo": []
