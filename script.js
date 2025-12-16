@@ -397,7 +397,7 @@ function voltarPasso1() {
     document.querySelectorAll('.professor-card').forEach(card => {
         card.classList.remove('selected');
     });
-    irParaPasso(0);
+    irParaPasso(1);
 }
 
 function voltarPasso2() {
