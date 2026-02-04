@@ -447,14 +447,20 @@ Brava Beach Club
 Telefone: (43) 9144-2802
 Você é Time Brava !`;
     
-    // Determinar o número do WhatsApp baseado no professor
+    // Determinar o número do WhatsApp baseado no esporte ou professor
     let numeroWhatsApp;
-    if (estadoAgendamento.professor.nome === 'Samuel Isaac') {
+    
+    // Se for vôlei, enviar para o número específico
+    if (estadoAgendamento.esporte === 'volei') {
+        numeroWhatsApp = '5543996541997'; // +55 43 99654-1997
+    } else if (estadoAgendamento.professor.nome === 'Ademir Carlos José') {
+        numeroWhatsApp = '5543991442802'; // +55 43 99144-2802
+    } else if (estadoAgendamento.professor.nome === 'Samuel Isaac') {
         numeroWhatsApp = '554399663926'; // +55 43 9966-3926
     } else if (estadoAgendamento.professor.nome === 'Maria Pazzotti') {
         numeroWhatsApp = '554399700998'; // +55 43 9970-0998
     } else if (estadoAgendamento.professor.nome === 'Ana Carolina Gimenez') {
-        numeroWhatsApp = '5543998273947'; // +55 43 9827-3947
+        numeroWhatsApp = '5543996541997'; // +55 43 99654-1997
     } else {
         numeroWhatsApp = '554391442802'; // +55 43 9144-2802 - Número padrão da Brava
     }
